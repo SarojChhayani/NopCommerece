@@ -18,6 +18,11 @@ public class MyStepDef extends Utils{
     PaymentInfoPage paymentInfoPage = new PaymentInfoPage();
     ConfirmOrderPage confirmOrderPage = new ConfirmOrderPage();
     CheckOutCompletedPage checkOutCompletedPage = new CheckOutCompletedPage();
+    NewReleasePage newReleasePage = new NewReleasePage();
+    Electronics electronics = new Electronics();
+    CameraAndPhoto cameraAndPhoto = new CameraAndPhoto();
+    LeicaTMirrorlessDigitalCamera leicaTMirrorlessDigitalCamera = new LeicaTMirrorlessDigitalCamera();
+    ProductEmailAFriend productEmailAFriend = new ProductEmailAFriend();
     @Given("I am On Home Page")
     public void i_am_on_home_page() {
 
@@ -125,5 +130,46 @@ public class MyStepDef extends Utils{
     @Then("each product contain {string}")
     public void eachProductContain(String currencySymbol) {
         homePage.verifyEachProductContainCurrencySymbol(currencySymbol);
+    }
+
+
+    @When("I click on Details button under news release Section")
+    public void iClickOnDetailsButtonUnderNewsReleaseSection() {
+        homePage.clickOnDetailsButton();
+    }
+
+    @And("I enter Comment Details")
+    public void iEnterCommentDetails() {
+        newReleasePage.addingNewComment();
+    }
+
+    @Then("verify new comment msg display verify added new comment is display at last")
+    public void verifyNewCommentMsgDisplayVerifyAddedNewCommentIsDisplayAtLast() {
+        newReleasePage.verifyCommentMsgAndAddedNewCommentIsDisplayAtLast();
+    }
+
+    @When("I Click on Electronics Button")
+    public void iClickOnElectronicsButton() {
+        homePage.clickOnElectronics();
+    }
+
+    @And("I click on Camera & Photo")
+    public void iClickOnCameraPhoto() {
+        electronics.clickOnCameraAndPhoto();
+    }
+
+    @And("I click on Leica T Mirrorless Digital Camera Product")
+    public void iClickOnLeicaTMirrorlessDigitalCameraProduct() {
+        cameraAndPhoto.ClickOnProduct();
+    }
+
+    @And("i click On Email A Friend")
+    public void iClickOnEmailAFriend() {
+        leicaTMirrorlessDigitalCamera.clickOnEmailAFriend();
+    }
+
+    @Then("I refer a product to friend")
+    public void iReferAProductToFriend() {
+        productEmailAFriend.productReferAFriend();
     }
 }

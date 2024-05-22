@@ -47,5 +47,10 @@ public class HomePage extends Utils {
     public void clickOnDetailsButton() {
         clickOnElement(_detailsButton);
     }
+    public void clickOnElectronics(){
+        //Click on Electronics option from top bar
+        clickOnElement(By.xpath("//ul[@class='top-menu notmobile']//a[normalize-space()='Electronics']"));
+
+    }
 }
 

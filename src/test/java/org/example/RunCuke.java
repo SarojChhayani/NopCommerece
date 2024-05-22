@@ -5,7 +5,7 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = ".", tags = "@currency",  plugin = { "pretty", "html:target/cucumber-reports.html" },publish = true)
+@CucumberOptions(features = ".", tags = "@referAProduct",  plugin = { "pretty", "html:target/cucumber-reports.html" },publish = true)
 
 
 

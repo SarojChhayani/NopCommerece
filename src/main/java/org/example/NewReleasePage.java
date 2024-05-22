@@ -15,7 +15,7 @@ public class NewReleasePage extends Utils {
         //Type Title
         typeText(_title, " Mr. XYZ");
         // Type Comment
-        typeText(_comment, "Hello Mr.XYZ");
+        typeText(_comment, "Hello Mr.XYZ"+randomDate());
         //click on NEW COMMENT
         clickOnElement(_newComment);}
     public void verifyCommentMsgAndAddedNewCommentIsDisplayAtLast() {
